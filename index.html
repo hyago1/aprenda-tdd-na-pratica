@@ -18,14 +18,14 @@
     const cedulasDisponiveis = [100, 50, 20, 10, 5, 2, 1]
       // A sua solução será escrita aqui!
        function calcularTroco(precoDoProduto, valorPago) {
-        let diferenca =valorPago -  precoDoProduto; 
-        let aux = 0;
-        let auxTroco = diferenca-aux
-        let troco = []
+        let diferenca = valorPago -  precoDoProduto; //diferença entre pProduto e pagamento 
+        let aux = 0; // variavel auxiliar pra somar as cedulas
+        let auxTroco = diferenca-aux //variavel auxiliar que ajuda a separar as cedulas
+        let troco = [] // troco
 
           for (let i = 0; i < cedulasDisponiveis.length; i++) {
             if (aux != diferenca ) {
-              if (cedulasDisponiveis[i]<=  auxTroco) {
+            if (cedulasDisponiveis[i]<=  auxTroco) {
            console.log(cedulasDisponiveis[i]);
             troco.push(cedulasDisponiveis[i])
             aux = aux + cedulasDisponiveis[i];
@@ -35,9 +35,7 @@
               break
             }
           
-          
          }
-         
         
          troco;
          return troco
